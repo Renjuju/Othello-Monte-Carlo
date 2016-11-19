@@ -86,13 +86,6 @@ public class GiveAwayMiniMaxOthelloPlayer extends OthelloPlayer {
     }
 
     private int countMatches(String s, String c) {
-        String[] arrS = s.split("");
-        int count = 0;
-        for(String x : arrS) {
-            if(x.equals(c)) {
-                count++;
-            }
-        }
-        return count;
+        return s.length() - s.replace(c, "").length();
     }
 }
