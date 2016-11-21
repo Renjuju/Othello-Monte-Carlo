@@ -15,7 +15,7 @@ public class MonteCarloPlayer extends OthelloPlayer {
             if(node != null) {
                 Node node2 = defaultPolicy(node);
                 int node2Score = score(node2);
-                //backup(node, node2Score);
+                backup(node, node2Score);
             }
         }
         return null;
@@ -41,7 +41,7 @@ public class MonteCarloPlayer extends OthelloPlayer {
         return null;
     }
 
-    public void backUp(Node node, int score) {
+    public void backup(Node node, int score) {
 
     }
 }
