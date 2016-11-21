@@ -2,9 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GiveAwayMiniMaxOthelloPlayer extends OthelloPlayer {
-
-//give away evaluation function.
-//maximizes enemy points until the end game, which then gives advantage to the AI
+    //based on the give away strategy - counter intuitive but it works
     private int depth;
 
     GiveAwayMiniMaxOthelloPlayer(int depth) {
@@ -71,6 +69,8 @@ public class GiveAwayMiniMaxOthelloPlayer extends OthelloPlayer {
             bestState = tempState;
             if(countMatches(tempState.toString(), ".") < 40) {
                 //optimize to enemy until certain number of pieces on the board
+                //give away evaluation function.
+                //maximizes enemy points until the end game, which then gives advantage to the AI
                 if(tempState.score() > val) {
                     val = tempState.score();
                     bestState = state;

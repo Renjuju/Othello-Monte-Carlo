@@ -7,7 +7,18 @@ public class Node {
     OthelloState state;
     OthelloMove move;
     int depth;
-    boolean isWinner = false;
+    int visits = 0;
+    int averageScore = 0;
+
+    public Node() {
+        this.depth = 0;
+        this.state = null;
+        this.children = new ArrayList<>();
+        this.parent = null;
+        this.move = null;
+        this.visits = 0;
+        this.averageScore = 0;
+    }
 
     public Node(OthelloState state) {
         this.depth = 0;
@@ -29,12 +40,18 @@ public class Node {
         this.children.add(child);
     }
 
-    public void isWinner(boolean isWinner) {
-        this.isWinner = isWinner;
-    }
-
     public void addMove(OthelloMove move) {
         this.move = move;
     }
 
+    public void setState(OthelloState state) {
+        this.state = state;
+    }
+
 }
+
+//its parent,
+// its children,
+// the action that led to this state,
+// the number of times this node has been visited and the
+// average score found so far for this node.
