@@ -29,6 +29,31 @@ public class MonteCarloPlayer extends OthelloPlayer {
         return node;
     }
 
+    public Node bestChild(Node node) {
+        Node bestChild = null;
+        int maxAverage = Integer.MIN_VALUE;
+        int minAverage = Integer.MAX_VALUE;
+        if(node.state.nextPlayerToMove == node.state.PLAYER1) {
+            //max average score
+            for(Node child : node.children) {
+                if(child.averageScore > maxAverage) {
+                    bestChild = child;
+                    maxAverage = child.averageScore;
+                }
+            }
+            return bestChild;
+        } else {
+            //min average score
+            for(Node child : node.children) {
+                if(child.averageScore < minAverage) {
+                    bestChild = child;
+                    minAverage = child.averageScore;
+                }
+            }
+            return bestChild;
+        }
+    }
+
     public Node treePolicy(Node node) {
         return null;
     }
