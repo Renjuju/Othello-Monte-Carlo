@@ -48,6 +48,9 @@ public class Node {
         this.state = state;
     }
 
+    public boolean hasParent() {
+        return this.parent != null;
+    }
 }
 
 //its parent,
