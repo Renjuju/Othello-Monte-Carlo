@@ -1,3 +1,5 @@
+import java.util.List;
+
 /**
  * Created by renju on 11/19/16.
  */
@@ -18,7 +20,7 @@ public class MonteCarloPlayer extends OthelloPlayer {
                 backup(node, node2Score);
             }
         }
-        return null;
+        return bestChild(root);
     }
 
     public Node createNode(int[][] board) {
@@ -53,8 +55,33 @@ public class MonteCarloPlayer extends OthelloPlayer {
             return bestChild;
         }
     }
-
+// treePolicy(node): this function does the following:
+// If 'node' still has any children that are not in the tree, then it generates one of those children
+// ('newnode'), it adds 'newnode' as a child to 'node', and returns ‘newnode’.
+//  If 'node' is a terminal node (no actions can be performed). Then it returns “node”
+//
+// If 'node' is not a terminal but all its children are in the tree,
+// then: 90% of the times "nodetmp = bestChild(node)",
+// and 10% of the times "nodetmp = [a child of node at random]" (if you are curious,
+// this is called an epsilon-greedy strategy). Then, the function returns "treePolicy(nodetmp)"
     public Node treePolicy(Node node) {
+        List<OthelloMove> moveList = node.state.generateMoves();
+
+        for(OthelloMove move : moveList) {
+            boolean hasMove = false;
+            for(Node child : node.children) {
+                if(child.move.equals(move)) {
+                    hasMove = true;
+                }
+            }
+            if(!hasMove) {
+                Node newNode = new Node(node);
+                newNode.setMove(move);
+                newNode.setState(node.state.applyMoveCloning(move));
+                node.addChild(newNode);
+                return newNode;
+            }
+        }
         return null;
     }
 
