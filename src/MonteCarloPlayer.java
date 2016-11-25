@@ -22,7 +22,7 @@ public class MonteCarloPlayer extends OthelloPlayer {
     }
 
     public Node MonteCarloTreeSearch(OthelloState state) {
-        Node root = createNode(state.board);
+        Node root = createNode(state);
         for(int i = 0; i < this.iterations; i++) {
             Node node = treePolicy(root);
             if(node != null) {
@@ -34,12 +34,8 @@ public class MonteCarloPlayer extends OthelloPlayer {
         return bestChild(root);
     }
 
-    public Node createNode(int[][] board) {
-        Node node = new Node();
-        int boardSize = board.length;
-        OthelloState state = new OthelloState(boardSize);
-        node.setState(state);
-        return node;
+    public Node createNode(OthelloState state) {
+        return new Node(state);
     }
 
     public Node bestChild(Node node) {

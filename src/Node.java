@@ -28,6 +28,15 @@ public class Node {
         this.visits = 0;
     }
 
+    public Node(OthelloState state) {
+        this.parent = null;
+        this.depth = 0;
+        this.visits = 0;
+        this.averageScore = state.score();
+        this.children = new ArrayList<>();
+        this.state = state;
+    }
+
     public void setMove(OthelloMove move) {
         this.move = move;
     }
@@ -48,9 +57,3 @@ public class Node {
         return this.parent != null;
     }
 }
-
-//its parent,
-// its children,
-// the action that led to this state,
-// the number of times this node has been visited and the
-// average score found so far for this node.
