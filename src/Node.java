@@ -20,15 +20,6 @@ public class Node {
         this.averageScore = 0;
     }
 
-//    public Node(OthelloState state, OthelloMove move) {
-//        this.depth = 0;
-//        this.state = state;
-//        this.children = new ArrayList<>();
-//        this.averageScore = 0;
-//        this.visits = 0;
-//        this.move = move;
-//    }
-
     public Node(Node parent) {
         this.parent = parent;
         this.depth = this.parent.depth + 1;

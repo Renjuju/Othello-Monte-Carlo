@@ -1,0 +1,671 @@
+
+Current state, O to move:
+........
+........
+........
+...OX...
+...XO...
+........
+........
+........
+Player O to 4, 2
+
+Current state, X to move:
+........
+........
+....O...
+...OO...
+...XO...
+........
+........
+........
+Player X to 5, 4
+
+Current state, O to move:
+........
+........
+....O...
+...OO...
+...XXX..
+........
+........
+........
+Player O to 5, 5
+
+Current state, X to move:
+........
+........
+....O...
+...OO...
+...XOX..
+.....O..
+........
+........
+Player X to 5, 6
+
+Current state, O to move:
+........
+........
+....O...
+...OO...
+...XOX..
+.....X..
+.....X..
+........
+Player O to 6, 5
+
+Current state, X to move:
+........
+........
+....O...
+...OO...
+...XOO..
+.....XO.
+.....X..
+........
+Player X to 7, 4
+
+Current state, O to move:
+........
+........
+....O...
+...OO...
+...XOO.X
+.....XX.
+.....X..
+........
+Player O to 6, 6
+
+Current state, X to move:
+........
+........
+....O...
+...OO...
+...XOO.X
+.....OX.
+.....XO.
+........
+Player X to 3, 2
+
+Current state, O to move:
+........
+........
+...XO...
+...XX...
+...XOX.X
+.....OX.
+.....XO.
+........
+Player O to 4, 6
+
+Current state, X to move:
+........
+........
+...XO...
+...XX...
+...XOX.X
+.....OX.
+....OOO.
+........
+Player X to 7, 7
+
+Current state, O to move:
+........
+........
+...XO...
+...XX...
+...XXX.X
+.....XX.
+....OOX.
+.......X
+Player O to 7, 6
+
+Current state, X to move:
+........
+........
+...XO...
+...XX...
+...XXX.X
+.....XX.
+....OOOO
+.......X
+Player X to 5, 1
+
+Current state, O to move:
+........
+.....X..
+...XX...
+...XX...
+...XXX.X
+.....XX.
+....OOOO
+.......X
+Player O to 6, 4
+
+Current state, X to move:
+........
+.....X..
+...XX...
+...XX...
+...XXXOX
+.....OO.
+....OOOO
+.......X
+Player X to 5, 7
+
+Current state, O to move:
+........
+.....X..
+...XX...
+...XX...
+...XXXOX
+.....XO.
+....OXOO
+.....X.X
+Player O to 4, 7
+
+Current state, X to move:
+........
+.....X..
+...XX...
+...XX...
+...XXXOX
+.....XO.
+....OOOO
+....OX.X
+Player X to 3, 7
+
+Current state, O to move:
+........
+.....X..
+...XX...
+...XX...
+...XXXOX
+.....XO.
+....XOOO
+...XXX.X
+Player O to 5, 3
+
+Current state, X to move:
+........
+.....X..
+...XX...
+...XXO..
+...XXOOX
+.....OO.
+....XOOO
+...XXX.X
+Player X to 7, 5
+
+Current state, O to move:
+........
+.....X..
+...XX...
+...XXX..
+...XXOXX
+.....OOX
+....XOXX
+...XXX.X
+Player O to 5, 2
+
+Current state, X to move:
+........
+.....X..
+...XXO..
+...XXO..
+...XXOXX
+.....OOX
+....XOXX
+...XXX.X
+Player X to 4, 5
+
+Current state, O to move:
+........
+.....X..
+...XXO..
+...XXO..
+...XXOXX
+....XXXX
+....XOXX
+...XXX.X
+Player O to 5, 0
+
+Current state, X to move:
+.....O..
+.....O..
+...XXO..
+...XXO..
+...XXOXX
+....XXXX
+....XOXX
+...XXX.X
+Player X to 6, 3
+
+Current state, O to move:
+.....O..
+.....O..
+...XXO..
+...XXXX.
+...XXXXX
+....XXXX
+....XOXX
+...XXX.X
+Player O to 2, 4
+
+Current state, X to move:
+.....O..
+.....O..
+...XOO..
+...OXXX.
+..OXXXXX
+....XXXX
+....XOXX
+...XXX.X
+Player X to 6, 2
+
+Current state, O to move:
+.....O..
+.....O..
+...XXXX.
+...OXXX.
+..OXXXXX
+....XXXX
+....XOXX
+...XXX.X
+Player O to 3, 6
+
+Current state, X to move:
+.....O..
+.....O..
+...XXXX.
+...OXXX.
+..OXXXXX
+....XXXX
+...OOOXX
+...XXX.X
+Player X to 2, 5
+
+Current state, O to move:
+.....O..
+.....O..
+...XXXX.
+...OXXX.
+..OXXXXX
+..X.XXXX
+...XOOXX
+...XXX.X
+Player O to 7, 3
+
+Current state, X to move:
+.....O..
+.....O..
+...XXXO.
+...OOOOO
+..OXXXOX
+..X.XOXX
+...XOOXX
+...XXX.X
+Player X to 2, 2
+
+Current state, O to move:
+.....O..
+.....O..
+..XXXXO.
+...XOOOO
+..OXXXOX
+..X.XOXX
+...XOOXX
+...XXX.X
+Player O to 6, 7
+
+Current state, X to move:
+.....O..
+.....O..
+..XXXXO.
+...XOOOO
+..OXXXOX
+..X.XOOX
+...XOOOX
+...XXXOX
+Player X to 3, 5
+
+Current state, O to move:
+.....O..
+.....O..
+..XXXXO.
+...XOOOO
+..OXXXOX
+..XXXOOX
+...XXOOX
+...XXXOX
+Player O to 6, 1
+
+Current state, X to move:
+.....O..
+.....OO.
+..XXXOO.
+...XOOOO
+..OXXXOX
+..XXXOOX
+...XXOOX
+...XXXOX
+Player X to 7, 2
+
+Current state, O to move:
+.....O..
+.....OO.
+..XXXXXX
+...XOOXX
+..OXXXOX
+..XXXOOX
+...XXOOX
+...XXXOX
+Player O to 2, 1
+
+Current state, X to move:
+.....O..
+..O..OO.
+..XOXXXX
+...XOOXX
+..OXXXOX
+..XXXOOX
+...XXOOX
+...XXXOX
+Player X to 1, 5
+
+Current state, O to move:
+.....O..
+..O..OO.
+..XOXXXX
+...XOOXX
+..XXXXOX
+.XXXXOOX
+...XXOOX
+...XXXOX
+Player O to 7, 1
+
+Current state, X to move:
+.....O..
+..O..OOO
+..XOXXOX
+...XOOXX
+..XXXXOX
+.XXXXOOX
+...XXOOX
+...XXXOX
+Player X to 3, 1
+
+Current state, O to move:
+.....O..
+..OX.OOO
+..XXXXOX
+...XOOXX
+..XXXXOX
+.XXXXOOX
+...XXOOX
+...XXXOX
+Player O to 1, 2
+
+Current state, X to move:
+.....O..
+..OX.OOO
+.OOOOOOX
+...XOOXX
+..XXXXOX
+.XXXXOOX
+...XXOOX
+...XXXOX
+Player X to 1, 1
+
+Current state, O to move:
+.....O..
+.XXX.OOO
+.OXOOOOX
+...XOOXX
+..XXXXOX
+.XXXXOOX
+...XXOOX
+...XXXOX
+Player O to 3, 0
+
+Current state, X to move:
+...O.O..
+.XOO.OOO
+.OXOOOOX
+...XOOXX
+..XXXXOX
+.XXXXOOX
+...XXOOX
+...XXXOX
+Player X to 6, 0
+
+Current state, O to move:
+...O.OX.
+.XOO.XXO
+.OXOXOXX
+...XOOXX
+..XXXXOX
+.XXXXOOX
+...XXOOX
+...XXXOX
+Player O to 7, 0
+
+Current state, X to move:
+...O.OOO
+.XOO.XOO
+.OXOXOXX
+...XOOXX
+..XXXXOX
+.XXXXOOX
+...XXOOX
+...XXXOX
+Player X to 2, 0
+
+Current state, O to move:
+..XO.OOO
+.XXX.XOO
+.OXOXOXX
+...XOOXX
+..XXXXOX
+.XXXXOOX
+...XXOOX
+...XXXOX
+Player O to 4, 1
+
+Current state, X to move:
+..XO.OOO
+.XXXOOOO
+.OXOOOXX
+...XOOXX
+..XXXXOX
+.XXXXOOX
+...XXOOX
+...XXXOX
+Player X to 0, 3
+
+Current state, O to move:
+..XO.OOO
+.XXXOOOO
+.XXOOOXX
+X..XOOXX
+..XXXXOX
+.XXXXOOX
+...XXOOX
+...XXXOX
+Player O to 2, 6
+
+Current state, X to move:
+..XO.OOO
+.XXXOOOO
+.XXOOOXX
+X..XOOXX
+..XXOXOX
+.XXOXOOX
+..OOOOOX
+...XXXOX
+Player X to 1, 7
+
+Current state, O to move:
+..XO.OOO
+.XXXOOOO
+.XXOOOXX
+X..XOXXX
+..XXXXOX
+.XXXXOOX
+..XOOOOX
+.X.XXXOX
+Player O to 2, 3
+
+Current state, X to move:
+..XO.OOO
+.XXXOOOO
+.XXOOOXX
+X.OOOXXX
+..XOXXOX
+.XXXOOOX
+..XOOOOX
+.X.XXXOX
+Player X to 2, 7
+
+Current state, O to move:
+..XO.OOO
+.XXXOOOO
+.XXOOOXX
+X.OOOXXX
+..XOXXOX
+.XXXXOOX
+..XXOOOX
+.XXXXXOX
+Player O to 1, 4
+
+Current state, X to move:
+..XO.OOO
+.XXXOOOO
+.XXOOOXX
+X.OOOXXX
+.OOOXXOX
+.XXXXOOX
+..XXOOOX
+.XXXXXOX
+Player X to 1, 3
+
+Current state, O to move:
+..XO.OOO
+.XXXOOOO
+.XXOOOXX
+XXXXXXXX
+.XXOXXOX
+.XXXXOOX
+..XXOOOX
+.XXXXXOX
+Player O to 0, 5
+
+Current state, X to move:
+..XO.OOO
+.XXXOOOO
+.XXOOOXX
+XXOXXXXX
+.OXOXXOX
+OOOOOOOX
+..XXOOOX
+.XXXXXOX
+Player X to 0, 4
+
+Current state, O to move:
+..XO.OOO
+.XXXOOOO
+.XXOOOXX
+XXOXXXXX
+XXXOXXOX
+OXOOOOOX
+..XXOOOX
+.XXXXXOX
+Player O to 0, 6
+
+Current state, X to move:
+..XO.OOO
+.XXXOOOO
+.XXOOOXX
+XXOOXXXX
+XXOOXXOX
+OOOOOOOX
+O.XXOOOX
+.XXXXXOX
+Player X to 4, 0
+
+Current state, O to move:
+..XXXOOO
+.XXXXXOO
+.XXOXOXX
+XXOOXXXX
+XXOOXXOX
+OOOOOOOX
+O.XXOOOX
+.XXXXXOX
+Player O to 1, 6
+
+Current state, X to move:
+..XXXOOO
+.XXXXXOO
+.XXOXOXX
+XXOOXXXX
+XXOOXXOX
+OOOOOOOX
+OOOOOOOX
+.XXXXXOX
+Player X to 0, 7
+
+Current state, O to move:
+..XXXOOO
+.XXXXXOO
+.XXOXOXX
+XXOOXXXX
+XXOXXXOX
+XOXOOOOX
+XXOOOOOX
+XXXXXXOX
+Player O to 1, 0
+
+Current state, X to move:
+.OOOOOOO
+.OOXXXOO
+.OXOXOXX
+XOOOXXXX
+XOOXXXOX
+XOXOOOOX
+XXOOOOOX
+XXXXXXOX
+Player X to 0, 1
+
+Current state, O to move:
+.OOOOOOO
+XXXXXXOO
+.XXOXOXX
+XOXOXXXX
+XOOXXXOX
+XOXOOOOX
+XXOOOOOX
+XXXXXXOX
+Player O to 0, 2
+
+Current state, X to move:
+.OOOOOOO
+XOXXXXOO
+OOOOXOXX
+XOXOXXXX
+XOOXXXOX
+XOXOOOOX
+XXOOOOOX
+XXXXXXOX
+Player X to 0, 0
+
+Final state with score: -8
+XOOOOOOO
+XXXXXXOO
+OOXOXOXX
+XOXXXXXX
+XOOXXXOX
+XOXOOOOX
+XXOOOOOX
+XXXXXXOX
+
