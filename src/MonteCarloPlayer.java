@@ -14,7 +14,11 @@ public class MonteCarloPlayer extends OthelloPlayer {
 
     @Override
     public OthelloMove getMove(OthelloState state) {
-        return MonteCarloTreeSearch(state).move;
+        OthelloMove move = MonteCarloTreeSearch(state).move;
+        OthelloState newState = MonteCarloTreeSearch(state).state;
+
+        System.out.println("Here is the move: " + move);
+        return move;
     }
 
     public Node MonteCarloTreeSearch(OthelloState state) {
@@ -62,15 +66,7 @@ public class MonteCarloPlayer extends OthelloPlayer {
             return bestChild;
         }
     }
-// treePolicy(node): this function does the following:
-// If 'node' still has any children that are not in the tree, then it generates one of those children
-// ('newnode'), it adds 'newnode' as a child to 'node', and returns ‘newnode’.
-//  If 'node' is a terminal node (no actions can be performed). Then it returns “node”
-//
-// If 'node' is not a terminal but all its children are in the tree,
-// then: 90% of the times "nodetmp = bestChild(node)",
-// and 10% of the times "nodetmp = [a child of node at random]" (if you are curious,
-// this is called an epsilon-greedy strategy). Then, the function returns "treePolicy(nodetmp)"
+
     public Node treePolicy(Node node) {
         List<OthelloMove> moveList = node.state.generateMoves();
 
@@ -95,16 +91,17 @@ public class MonteCarloPlayer extends OthelloPlayer {
             }
         }
 
-
         //epsilon greedy strategy
         Node tempNode;
         Random random = new Random();
         if(random.nextInt(100) < 90) {
+            System.out.println("Greedy best child");
             tempNode = bestChild(node);
         } else {
             //random child
             tempNode = node.children.get(random.nextInt(node.children.size()));
         }
+        System.out.println("Greedy");
         return treePolicy(tempNode);
     }
 
@@ -112,27 +109,19 @@ public class MonteCarloPlayer extends OthelloPlayer {
         return node.state.score();
     }
 
-    //defaultPolicy(node):
-    // this function just uses the random agent to select actions at random for each player,
-    // until the game is over,
-    // and returns the final state of the game.
     public Node defaultPolicy(Node node) {
         Node tempNode = new Node();
-        tempNode.setState(node.state);
+        tempNode.setState(node.state.clone());
+        OthelloRandomPlayer player = new OthelloRandomPlayer();
 
-        OthelloPlayer players[] = {new OthelloRandomPlayer(),
-                new OthelloRandomPlayer()};
-
+        int iterations = 0;
         while(!tempNode.state.gameOver()) {
-            OthelloMove move = players[tempNode.state.nextPlayerToMove].getMove(tempNode.state);
-            tempNode.state = tempNode.state.applyMoveCloning(move);
+            iterations++;
+            tempNode.state.applyMove(player.getMove(tempNode.state));
         }
         return tempNode;
     }
 
-    //backup(node,score): increments in 1 the number of times "node" has been visited,
-    // and updates the average score in "node" with the value "score".
-    // If "node" has a parent, then it calls "backup(node.parent,score)".
     public void backup(Node node, int score) {
         node.visits++;
         node.averageScore = score;
@@ -142,13 +131,3 @@ public class MonteCarloPlayer extends OthelloPlayer {
         }
     }
 }
-
-//    MonteCarloTreeSearch(board,iterations):
-//        root = createNode(board);
-//        for i = 0...iterations:
-//        node = treePolicy(root);
-//        if (node!=null)
-//        node2 = defaultPolicy(node);
-//        Node2Score = score(node2);
-//        backup(node,Node2Score);
-//        return action(bestChild(root))
