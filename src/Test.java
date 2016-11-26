@@ -9,7 +9,8 @@ public class Test {
         // Create the game state with the initial position for an 8x8 board:
 
         OthelloState state = new OthelloState(8);
-        OthelloPlayer players[] = {new MonteCarloPlayer(10000), new OthelloRandomPlayer()};
+        OthelloPlayer players[] = {new MonteCarloPlayer(1000), new OthelloRandomPlayer()};
+        
         double start = System.currentTimeMillis();
         do{
             // Display the current state in the console:

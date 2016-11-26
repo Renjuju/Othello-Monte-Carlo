@@ -14,11 +14,14 @@ public class MonteCarloPlayer extends OthelloPlayer {
 
     @Override
     public OthelloMove getMove(OthelloState state) {
-        OthelloMove move = MonteCarloTreeSearch(state).move;
-        OthelloState newState = MonteCarloTreeSearch(state).state;
+        Node node = MonteCarloTreeSearch(state);
+//        OthelloState newState = MonteCarloTreeSearch(state).state;
 
-        System.out.println("Here is the move: " + move);
-        return move;
+//        System.out.println("Here is the move: " + move);
+        if(node == null) {
+            return null;
+        }
+        return node.move;
     }
 
     public Node MonteCarloTreeSearch(OthelloState state) {
@@ -110,9 +113,7 @@ public class MonteCarloPlayer extends OthelloPlayer {
         tempNode.setState(node.state.clone());
         OthelloRandomPlayer player = new OthelloRandomPlayer();
 
-        int iterations = 0;
         while(!tempNode.state.gameOver()) {
-            iterations++;
             tempNode.state.applyMove(player.getMove(tempNode.state));
         }
         return tempNode;
