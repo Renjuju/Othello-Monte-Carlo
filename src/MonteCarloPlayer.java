@@ -4,7 +4,7 @@ import java.util.Random;
 /**
  * Created by renju on 11/19/16.
  */
-public class MonteCarloPlayer extends OthelloPlayer {
+class MonteCarloPlayer extends OthelloPlayer {
 
     private int iterations;
 
@@ -15,16 +15,13 @@ public class MonteCarloPlayer extends OthelloPlayer {
     @Override
     public OthelloMove getMove(OthelloState state) {
         Node node = MonteCarloTreeSearch(state);
-//        OthelloState newState = MonteCarloTreeSearch(state).state;
-
-//        System.out.println("Here is the move: " + move);
         if(node == null) {
             return null;
         }
         return node.move;
     }
 
-    public Node MonteCarloTreeSearch(OthelloState state) {
+    private Node MonteCarloTreeSearch(OthelloState state) {
         Node root = createNode(state);
         for(int i = 0; i < this.iterations; i++) {
             Node node = treePolicy(root);
@@ -37,11 +34,11 @@ public class MonteCarloPlayer extends OthelloPlayer {
         return bestChild(root);
     }
 
-    public Node createNode(OthelloState state) {
+    private Node createNode(OthelloState state) {
         return new Node(state);
     }
 
-    public Node bestChild(Node node) {
+    private Node bestChild(Node node) {
         Node bestChild = null;
         int maxAverage = Integer.MIN_VALUE;
         int minAverage = Integer.MAX_VALUE;
@@ -66,7 +63,7 @@ public class MonteCarloPlayer extends OthelloPlayer {
         }
     }
 
-    public Node treePolicy(Node node) {
+    private Node treePolicy(Node node) {
         List<OthelloMove> moveList = node.state.generateMoves();
 
         //terminal node
@@ -104,11 +101,11 @@ public class MonteCarloPlayer extends OthelloPlayer {
         return treePolicy(tempNode);
     }
 
-    public int score(Node node) {
+    private int score(Node node) {
         return node.state.score();
     }
 
-    public Node defaultPolicy(Node node) {
+    private Node defaultPolicy(Node node) {
         Node tempNode = new Node();
         tempNode.setState(node.state.clone());
         OthelloRandomPlayer player = new OthelloRandomPlayer();
@@ -119,7 +116,7 @@ public class MonteCarloPlayer extends OthelloPlayer {
         return tempNode;
     }
 
-    public void backup(Node node, int score) {
+    private void backup(Node node, int score) {
         node.visits++;
         node.averageScore = score;
 
